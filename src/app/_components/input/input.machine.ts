@@ -178,6 +178,32 @@ export const inputMachine = createMachine(
             },
           },
           validating: {
+            on: {
+              CHANGE: [
+                {
+                  guard: "isAllMode",
+                  target: "validating",
+                },
+                {
+                  guard: "isOnChangeMode",
+                  target: "validating",
+                },
+                {
+                  guard: "isOnTouchedMode",
+                  target: "validating",
+                },
+              ],
+              BLUR: [
+                {
+                  guard: "isAllMode",
+                  target: "validating",
+                },
+                {
+                  guard: "isOnBlurMode",
+                  target: "validating",
+                },
+              ],
+            },
             invoke: {
               id: "validate",
               src: "validate",
