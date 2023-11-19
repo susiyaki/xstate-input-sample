@@ -1,0 +1,26 @@
+.table {
+ width: 100%;
+ text-align: center;
+ border-collapse: collapse;
+ border-spacing: 0;
+ border: solid 1px #778ca3;
+}
+
+.thead {
+ padding: 10px;
+ background: #e9faf9;
+}
+
+.tr {
+ border-top: dashed 1px #778ca3;
+}
+
+.td1 {
+ padding: 10px;
+ width: 30%;
+}
+
+.td2 {
+ padding: 10px;
+ width: 70%;
+}
